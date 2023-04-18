@@ -11,11 +11,11 @@ public class MapTile extends HexTile {
 		this.mineralContent = null;
 	}
 	
-	public MapTile getAdjacentTile(int position) {
+	public MapTile getAdjacentTile(HexTile.AdjacentTile position) {
 		return (MapTile)super.getAdjacentTile(position);
 	}
 	
-	public MapTile getAdjacentTile(HexTile.AdjacentTile position) {
+	public MapTile getAdjacentTile(int position) {
 		return (MapTile)super.getAdjacentTile(position);
 	}
 	
@@ -23,19 +23,19 @@ public class MapTile extends HexTile {
 		return this.angle;
 	}
 	
-	public SegmentTile getSegmentTile() {
-		return this.segmentTile;
-	}
-	
-	public void setSegmentTile(SegmentTile segmentTile) {
-		this.segmentTile = segmentTile;
-	}
-	
 	public Mineral getMineral() {
 		return this.mineralContent;
 	}
 	
+	public SegmentTile getSegmentTile() {
+		return this.segmentTile;
+	}
+	
 	public void setMineral(Mineral mineralContent) {
 		this.mineralContent = mineralContent;
+	}
+	
+	public void setSegmentTile(SegmentTile segmentTile) {
+		this.segmentTile = segmentTile;
 	}
 }

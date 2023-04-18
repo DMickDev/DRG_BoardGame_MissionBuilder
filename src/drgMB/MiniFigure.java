@@ -25,11 +25,11 @@ public class MiniFigure {
 		this.figureType = figureType;
 	}
 	
-	public UUID getUUID() {
-		return this.figureUUID;
-	}
-	
 	public FigureType getFigureType() {
 		return this.figureType;
+	}
+	
+	public UUID getUUID() {
+		return this.figureUUID;
 	}
 }

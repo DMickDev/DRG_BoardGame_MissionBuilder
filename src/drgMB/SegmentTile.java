@@ -24,16 +24,16 @@ public class SegmentTile extends HexTile {
 		return this.anchorTile;
 	}
 	
-	public void setAnchorTile(MapTile anchorTile) {
-		this.anchorTile = anchorTile;
+	public MiniFigure getMini() {
+		return mini;
 	}
 
 	public TileType getTileType() {
 		return this.tileType;
 	}
 
-	public MiniFigure getMini() {
-		return mini;
+	public void setAnchorTile(MapTile anchorTile) {
+		this.anchorTile = anchorTile;
 	}
 
 	public void setMini(MiniFigure mini) {

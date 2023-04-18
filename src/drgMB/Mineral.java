@@ -18,11 +18,11 @@ public class Mineral {
 		this.mineralType = mineralType;
 	}
 	
-	public UUID getUUID() {
-		return this.mineralUUID;
-	}
-	
 	public MineralType getMineralType() {
 		return this.mineralType;
+	}
+	
+	public UUID getUUID() {
+		return this.mineralUUID;
 	}
 }

@@ -28,6 +28,14 @@ public class HexTileMap {
 		}
 		
 		/**
+		 * <p>Returns the number of rows in this preset.</p>
+		 * @return the number of rows in this preset
+		 */
+		public int getNumRows() {
+			return mapRows.length;
+		}
+		
+		/**
 		 * <p>Returns the row at the indicated index if it exists, otherwise it
 		 * will return -1. This flag does not currently serve any purpose.</p>
 		 * @param i the index of the row to get
@@ -47,14 +55,6 @@ public class HexTileMap {
 		 */
 		public int[] getRows() {
 			return mapRows.clone();
-		}
-		
-		/**
-		 * <p>Returns the number of rows in this preset.</p>
-		 * @return the number of rows in this preset
-		 */
-		public int getNumRows() {
-			return mapRows.length;
 		}
 	}
 	
@@ -114,17 +114,6 @@ public class HexTileMap {
 	}
 	
 	/**
-	 * <p>Invokes the rotate method in all tiles of the given map segment.</p>
-	 * @param segment the map segment to rotate
-	 * @param byAmount the rotation amount in number of faces
-	 */
-	public void rotate(MapSegment segment, int byAmount) {
-		for (SegmentTile st : segment.getSegmentTiles()) {
-			st.rotate(byAmount);
-		}
-	}
-	
-	/**
 	 * <p>Places the segment to the map one tile at a time with its origin
 	 * positioned at the given map tile. Placement will fail if the segment
 	 * overlaps another segment or extends beyond the edges of the map.</p>
@@ -163,5 +152,16 @@ public class HexTileMap {
 		}
 		// The placement of this tile has failed
 		return false;
+	}
+	
+	/**
+	 * <p>Invokes the rotate method in all tiles of the given map segment.</p>
+	 * @param segment the map segment to rotate
+	 * @param byAmount the rotation amount in number of faces
+	 */
+	public void rotate(MapSegment segment, int byAmount) {
+		for (SegmentTile st : segment.getSegmentTiles()) {
+			st.rotate(byAmount);
+		}
 	}
 }

@@ -14,8 +14,8 @@ public class MapSegment {
 		this.segmentTiles = segmentTiles;
 	}
 	
-	public UUID getUUID() {
-		return this.mapSegmentUUID;
+	public SegmentTile getOrigin() {
+		return this.originTile;
 	}
 	
 	public HashSet<SegmentTile> getSegmentTiles() {
@@ -24,7 +24,7 @@ public class MapSegment {
 		return returner;
 	}
 	
-	public SegmentTile getOrigin() {
-		return this.originTile;
+	public UUID getUUID() {
+		return this.mapSegmentUUID;
 	}
 }
